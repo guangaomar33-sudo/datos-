@@ -1,9 +1,3 @@
-/*
-para compilar:
- g++ -o clases clases.cpp
- para ejecutar:
- ./clases
-*/
 #include <iostream>
 
 using namespace std;
@@ -13,15 +7,31 @@ private:
     int x;
     int y;
 public:
-    Point(int px, int py) : x(px), y(py) {}
+    
+    point(int c) : x(c), y(c) {}
+
+    Point(int px, int py) : x(px), y(py) {
+        cout << "constructor from two values" << this << endl;
+    }
+
     void move(int dx, int dy) {
         x = x + dx;
         y = y + dy;
     }
+
+    int getX() const {
+        return x;
+    }
 };
 
 int main() {
+   cout << "point class" << endl;
+
     Point p(3, 7);
-    p.move(1, 1);
-    cout << "omar"<< endl;
+    point q(7)
+
+    //p.move(-2, 3);
+
+    cout << .getX() << endl;
+    return 0;
 }
